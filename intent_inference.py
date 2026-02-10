@@ -3,12 +3,17 @@ import torch.nn as nn
 import json
 from sentence_transformers import SentenceTransformer
 import numpy as np
-
+import os
 # -------------------------
 # Configuration
 # -------------------------
-MODEL_PATH = "/home/asus/Downloads/Python/AiRoboSoft Projects/chatbot-gui/trained_model/intent_classifier.pth"
-LABEL_MAP_PATH = "/home/asus/Downloads/Python/AiRoboSoft Projects/chatbot-gui/trained_model/label_map.json"
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+LABEL_MAP_PATH = os.path.join(BASE_DIR, "models", "label_map.json")
+MODEL_PATH = os.path.join(BASE_DIR, "models", "intent_classifier.pth")
+
 EMBEDDER_NAME = "all-MiniLM-L6-v2"   # will auto-download locally
 CONFIDENCE_THRESHOLD = 0.60          # adjustable
 
@@ -25,6 +30,8 @@ num_classes = len(label_map)
 # -------------------------
 # Classifier definition (must match training)
 # -------------------------
+
+
 class IntentClassifier(nn.Module):
     def __init__(self, input_dim, num_classes):
         super().__init__()
@@ -40,6 +47,7 @@ class IntentClassifier(nn.Module):
 
     def forward(self, x):
         return self.model(x)
+
 
 # -------------------------
 # Load model
@@ -57,6 +65,8 @@ embedder = SentenceTransformer(EMBEDDER_NAME)
 # -------------------------
 # Intent prediction function
 # -------------------------
+
+
 def predict_intent(text: str):
     # Generate embedding
     embedding = embedder.encode([text], convert_to_numpy=True)
@@ -84,6 +94,7 @@ def predict_intent(text: str):
         "intent": predicted_intent,
         "confidence": confidence
     }
+
 
 # -------------------------
 # Test manually
