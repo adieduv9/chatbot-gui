@@ -16,7 +16,7 @@ with open(os.path.join(BASE_DIR, 'intents.json'), 'r') as json_data:
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FILE = os.path.join(BASE_DIR, "data.pth")
-data = torch.load(FILE)
+
 
 input_size = data["input_size"]
 hidden_size = data["hidden_size"]
