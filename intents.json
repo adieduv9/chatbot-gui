@@ -1,0 +1,108 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hey",
+        "Hi",
+        "Hello",
+        "How are you",
+        "Good morning",
+        "Good evening"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting!",
+        "Hi, what can I do for you?",
+        "Hi, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Take care",
+        "Catch you later"
+      ],
+      "responses": [
+        "See you later, thanks for visiting!",
+        "Have a nice day!",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank you so much",
+        "I appreciate it"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?",
+        "What items are available?",
+        "What products do you offer?"
+      ],
+      "responses": [
+        "We sell coffee and tea.",
+        "We have a variety of coffee and tea options."
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?",
+        "Can I use my credit card?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard, and Paypal.",
+        "We accept most major credit cards, and Paypal."
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?",
+        "How fast is the delivery?",
+        "What is the delivery time?"
+      ],
+      "responses": [
+        "Delivery takes 2-4 days.",
+        "Shipping typically takes 2-4 days."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?",
+        "Make me laugh",
+        "Say something funny"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison.",
+        "I'm always up for a joke! Here's one: Why don't skeletons fight each other? They don't have the guts."
+      ]
+    }
+  ]
+}
